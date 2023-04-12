@@ -6,5 +6,3 @@ while n > 0:
       summa = summa + x
       n = n // 10
 print(summa)      
-
-
