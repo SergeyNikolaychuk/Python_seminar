@@ -7,20 +7,20 @@
 # Стихотворение  Винни-Пух вбивает в программу с клавиатуры.
 #  В ответе напишите “Парам пам-пам”, если с ритмом все в порядке и “Пам парам”,
 # сли с ритмом все не в порядке
-s = input()
-count = 0
-name = ['a']
-itog = list()
+def count_vowels(phrase: str) -> int:
+    number = 0
+    for char in phrase:
+        if char in letters:
+            number += 1
+    return number
 
-for sun in s:
-    if sum in name:
-        count +=1
-print(count)
-itog.append(count)
 
-if len(set(itog)) == 1:
-      print('Парам пам пам')
+def is_right_rhythm_poem(poem: str) -> bool:
+    phrases = poem.lower().split(" ")
+    return len(set(map(count_vowels, phrases))) == 1
+
+letters = "аеёиоуыэюя"
+if is_right_rhythm_poem(input("Винни-Пух, вбей своё стихотворение: ")):
+    print("Парам пам-пам")
 else:
-      print('Пам парам')    
-
-        
+    print("Пам парам")
